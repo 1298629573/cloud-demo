@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/1298629573/SpringCloudConfig
+          username: 1298629573@qq.com
+          password: sun521983
+      label: master
+server:
+  port: 8900
+eureka:
+  client:
+    service-url:
+      defaultZone: http://flmy:flmy123@localhost:8761/eureka/
+
+#��Щ�����Http��Դ������Щ
+#/{application}/{profile}[/{label}]
+#/{application}-{profile}.yml
+#/{label}/{application}-{profile}.yml
+#/{application}-{profile}.properties
+#/{label}/{application}-{profile}.properties
+
+#application ����spring.config.name�����
+#profile ��������棬����spring.profiles.active = test
+#label git��Դ��label Ĭ����master
